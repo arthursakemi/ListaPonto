@@ -18,20 +18,20 @@ public class Ponto {
         this.y = y;
     }
 
-    public int getX() {
-        return x;
+    public boolean igual(Ponto p) {
+        return this.x == p.x && this.y == p.y;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public double distancia(Ponto p) {
+        double distX = Math.pow(this.x - p.x, 2);
+        double distY = Math.pow(this.y - p.y, 2);
+
+        return Math.sqrt(distX + distY);
     }
 
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
+    @Override
+    public String toString() {
+        return "(" + x + "," + y + ")";
     }
 
 }

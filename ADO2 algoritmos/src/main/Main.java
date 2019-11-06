@@ -15,7 +15,26 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        ListaPonto pontos = new ListaPonto();
+
+        pontos.add(new Ponto(1, 1));
+        pontos.add(new Ponto(1, 1));
+        pontos.add(new Ponto(1, 1));
+        pontos.add(new Ponto(1, 1));
+        pontos.add(2, new Ponto(2, 2));
+        pontos.add(3, new Ponto(3, 3));
+
+        System.out.println(pontos.toString());
+
+        pontos.remove(2);
+
+        System.out.println(pontos.toString());
+
+        pontos.remove(3);
+
+        System.out.println(pontos.toString());
+
     }
 
 }
