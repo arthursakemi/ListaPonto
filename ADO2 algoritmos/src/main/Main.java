@@ -31,9 +31,7 @@ public class Main {
 
         System.out.println(pontos.toString());
 
-        pontos.remove(3);
-
-        System.out.println(pontos.toString());
+        System.out.println(pontos.indexOf(new Ponto(3, 3)));
 
     }
 

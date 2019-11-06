@@ -59,6 +59,17 @@ public class ListaPonto {
         return this.size;
     }
 
+    public int indexOf(Ponto p) {
+        int i;
+
+        for (i = 0; i < size; i++) {
+            if (this.pontos[i].equals(p)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     private void shiftRight(int i) {
         for (int j = size; j > i; j--) {
             this.pontos[j] = this.pontos[j - 1];

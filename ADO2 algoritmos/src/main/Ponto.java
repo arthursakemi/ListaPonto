@@ -18,11 +18,11 @@ public class Ponto {
         this.y = y;
     }
 
-    public boolean igual(Ponto p) {
+    public boolean equals(Ponto p) {
         return this.x == p.x && this.y == p.y;
     }
 
-    public double distancia(Ponto p) {
+    public double dist(Ponto p) {
         double distX = Math.pow(this.x - p.x, 2);
         double distY = Math.pow(this.y - p.y, 2);
 
