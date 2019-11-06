@@ -52,7 +52,11 @@ public class ListaPonto {
     }
 
     public void remove(Ponto p) {
+        int index = indexOf(p);
 
+        if (index >= 0) {
+            this.remove(index);
+        }
     }
 
     public int size() {
@@ -68,6 +72,35 @@ public class ListaPonto {
             }
         }
         return -1;
+    }
+
+    public Ponto get(int i) {
+        return this.pontos[i];
+    }
+
+    public double mostDistant() {
+        double dist = this.pontos[0].dist(this.pontos[1]);
+
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = i + 1; j < size; j++) {
+                double temp = this.pontos[i].dist(this.pontos[j]);
+
+                dist = temp > dist ? temp : dist;
+            }
+        }
+        return dist;
+    }
+
+    public ListaPonto insideRadius(int r, Ponto p) {
+        ListaPonto result = new ListaPonto();
+
+        for (int i = 0; i < this.size; i++) {
+            Ponto x = this.pontos[i];
+            if (x.dist(p) <= r) {
+                result.add(x);
+            }
+        }
+        return result;
     }
 
     private void shiftRight(int i) {
