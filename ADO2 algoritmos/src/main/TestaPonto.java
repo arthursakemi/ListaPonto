@@ -15,14 +15,15 @@ public class TestaPonto {
 
         ListaPonto pontos = new ListaPonto();
 
+        pontos.add(0, new Ponto(2, 2));
         pontos.add(new Ponto(0, 0));
         pontos.add(new Ponto(1, 1));
         pontos.add(new Ponto(1, 1));
         pontos.add(new Ponto(1, 1));
-        pontos.add(2, new Ponto(2, 2));
-        pontos.add(3, new Ponto(3, 4));
+        pontos.add(0, new Ponto(2, 1));
+        pontos.add(6, new Ponto(3, 4));
 
-        System.out.println(pontos.toString());
+        pontos.print();
 
         System.out.println(pontos.mostDistant());
 

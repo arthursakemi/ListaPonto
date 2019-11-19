@@ -37,6 +37,7 @@ public class ListaPonto {
         if (pontos.length == this.size) {
             expand();
         }
+
         shiftRight(i);
 
         this.pontos[i] = p;
@@ -126,6 +127,10 @@ public class ListaPonto {
         for (int i = 0; i < from.length; i++) {
             to[i] = from[i];
         }
+    }
+
+    public void print() {
+        System.out.println(this.toString());
     }
 
     @Override
