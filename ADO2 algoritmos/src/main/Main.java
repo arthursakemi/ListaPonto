@@ -83,11 +83,11 @@ public class Main {
         Ponto p = criarPonto();
 
         while (true) {
-            System.out.print("Informe a posicao desejada: ");
+            System.out.print("Informe o : ");
             i = in.nextInt();
 
             if (i > lista.size() || i < 0) {
-                System.err.println("Posicao inválida!");
+                System.err.println("Indice invalido!");
             } else {
                 break;
             }
